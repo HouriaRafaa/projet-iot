@@ -23,7 +23,7 @@ import javax.persistence.TemporalType;
 public class ConfirmationToken {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="token_id")
     private long tokenid;
 
