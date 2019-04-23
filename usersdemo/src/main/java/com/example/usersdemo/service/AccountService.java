@@ -7,7 +7,7 @@ public interface AccountService
 {
 
 
-    public AppUser saveUser(String username,String password,String confirmedPassword);
+     public AppUser saveUser(String username,String email,String password,String confirmedPassword);
 
     public AppRole saveRole(AppRole role);
 
