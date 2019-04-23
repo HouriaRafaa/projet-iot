@@ -27,6 +27,7 @@ public class AppUser {
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private  String password;
+    private String email;
     private  boolean actived;
 
     @OneToMany(mappedBy ="appUser")
@@ -35,5 +36,12 @@ public class AppUser {
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<AppRole> roles = new ArrayList<>();
 
-
+ public AppUser(String userName, String password, boolean actived, Collection<Canal> canals, Collection<AppRole> roles) {
+  this.userName = userName;
+  this.password = password;
+  this.actived = actived;
+  this.canals = canals;
+  this.roles = roles;
+ }
 }
+
